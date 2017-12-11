@@ -1,0 +1,38 @@
+{
+  "name": "bob-api",
+  "version": "1.0.0",
+  "description": "New and Improved Bank of Backenddev API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint; npm run tests",
+    "prod": "export PROD=true; node server.js",
+    "dev": "export PROD=false; node server.js | bunyan -o short",
+    "tests": "export TESTS=true; mocha --reporter nyan './{,!(node_modules)/**/}*.spec.js'",
+    "lint": "eslint --ignore-path .gitignore ./",
+    "migrate-db": "node ./scripts/migrate.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bunyan": "^1.8.8",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.9.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0",
+    "response-time": "^2.3.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+.nvmrc
+.env
+.npm-debug.log
+bob-error.log
